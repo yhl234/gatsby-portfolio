@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+
 import { FaAlignRight } from 'react-icons/fa'
+import Wrapper from './UI/Wrapper'
 
 const Header = ({ className }) => {
   const [isOpen, setNav] = useState(false)
@@ -11,25 +13,31 @@ const Header = ({ className }) => {
   }
   return (
     <header className={className}>
-      <nav className="navbar">
-        {/* <img src={} alt="backroads logo" /> */}
-        <button type="button" className="logoBtn" onClick={toggleNav}>
-          <FaAlignRight className="logoIcon" />
-        </button>
-        <ul className={isOpen ? `showNav` : `hideNav`}>
-          <li>
-            <Link className="navLink" to="/">
-              1
-            </Link>
-          </li>
-          <li>
-            <Link to="/">2</Link>
-          </li>
-          <li>
-            <Link to="/">3</Link>
-          </li>
-        </ul>
-      </nav>
+      <Wrapper>
+        <nav className="navbar">
+          <img className="logo" src="https://ccc.com" alt="logo" />
+          <button type="button" className="toggleBtn" onClick={toggleNav}>
+            <FaAlignRight className="toggleIcon" />
+          </button>
+          <ul className={isOpen ? `nav showNav` : `nav hideNav`}>
+            <li>
+              <Link className="navLink" to="/">
+                home
+              </Link>
+            </li>
+            <li>
+              <Link className="navLink" to="/Projects">
+                projects
+              </Link>
+            </li>
+            <li>
+              <Link className="navLink" to="/Contact">
+                Contact me
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </Wrapper>
     </header>
   )
 }
@@ -38,39 +46,51 @@ Header.propTypes = {
 }
 
 export default styled(Header)`
-  background-color: #777;
-  .logoBtn {
+  height: 65px;
+  background-color: var(--primaryColor);
+  /* background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 153, 153, 1) 100%); */
+  .navbar {
+    width: 100%;
+    .logo {
+      display: none;
+    }
+    @media screen and (min-width: 576px) {
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        display: block;
+      }
+    }
+  }
+  .toggleBtn {
+    padding: 1rem 5px;
     background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
   }
-  .logoIcon {
+  .toggleIcon {
     font-size: 1.5rem;
   }
   .hideNav {
     display: none;
   }
   .showNav {
+    position: relative;
     height: auto;
     list-style: none;
+    z-index: 999;
+    background-color: var(--primaryColor);
   }
   .navLink {
-    color: white;
+    color: var(--secondaryDark);
     display: block;
     padding: 1rem;
-    text-decoration: none !important;
-    text-transform: capitalize;
   }
 
   @media screen and (min-width: 576px) {
-    .navbar {
-      padding: 0 2rem;
-    }
-  }
-
-  @media screen and (min-width: 992px) {
-    .logoBtn {
+    .toggleBtn {
       display: none;
     }
     .hideNav {
@@ -79,8 +99,6 @@ export default styled(Header)`
       display: flex;
       a {
         padding: 1rem 1.25rem;
-        text-decoration: none;
-        text-transform: capitalize;
       }
     }
   }

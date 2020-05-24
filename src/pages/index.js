@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Title from '../components/UI/Title'
+import Landing from '../components/Landing'
 
 const Index = () => {
   const data = useStaticQuery(getPosts)
@@ -10,8 +10,7 @@ const Index = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Title title="Home" subtitle="Page" />
-      <div>hello from index</div>
+      <Landing />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (

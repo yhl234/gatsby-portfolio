@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
 
 :root {
-  --primaryColor: #3fd0d4;
+  --primaryColor: #ffc8c8;
+  --secondaryColor: #ff9999;
+  --primaryDark: #3e4149;
+  --secondaryDark: #444f5a;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
-  --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
   --mainTransition: all 0.3s linear;
@@ -17,30 +19,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  color: var(--mainBlack);
-  background: var(--mainWhite);
-  line-height: 1.4;
-  font-size: 1rem;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 1.25rem;
-  letter-spacing: var(--mainSpacing);
-}
-p {
-  margin-bottom: 1.25rem;
-}
-a {
-  text-decoration: none;
 }
 
 .btn-white,

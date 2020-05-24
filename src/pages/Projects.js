@@ -3,17 +3,17 @@ import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const Contact = props => {
+const Projects = props => {
   return (
     <Layout>
-      <SEO title="Contact" />
+      <SEO title="Projects" />
       <div>
-        <div>hello from contact</div>
+        <div>hello from Projects</div>
       </div>
     </Layout>
   )
 }
 
-Contact.propTypes = {}
+Projects.propTypes = {}
 
-export default Contact
+export default Projects

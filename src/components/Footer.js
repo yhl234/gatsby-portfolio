@@ -4,34 +4,37 @@ import PropTypes from 'prop-types'
 import { IconContext } from 'react-icons'
 import { AiFillMail, AiFillLinkedin } from 'react-icons/ai'
 import { FaGithubSquare } from 'react-icons/fa'
+import Wrapper from './UI/Wrapper'
 
 const Footer = ({ className }) => (
   <footer className={className}>
-    <h3>See You Soon</h3>
-    <div className="social-icons">
-      <a href="/">
-        <IconContext.Provider value={{ className: 'react-icons', size: '40px' }}>
-          <AiFillLinkedin />
-        </IconContext.Provider>
-      </a>
-      <a href="/">
-        <IconContext.Provider value={{ className: 'react-icons', size: '40px' }}>
-          <FaGithubSquare />
-        </IconContext.Provider>
-      </a>
+    <Wrapper padding="5px">
+      <h3>See You Soon</h3>
+      <div className="social-icons">
+        <a href="/">
+          <IconContext.Provider value={{ className: 'react-icons', size: '40px' }}>
+            <AiFillLinkedin />
+          </IconContext.Provider>
+        </a>
+        <a href="/">
+          <IconContext.Provider value={{ className: 'react-icons', size: '40px' }}>
+            <FaGithubSquare />
+          </IconContext.Provider>
+        </a>
 
-      <a href="/">
-        <IconContext.Provider value={{ className: 'react-icons', size: '40px' }}>
-          <AiFillMail />
-        </IconContext.Provider>
-      </a>
-    </div>
-    <div className="credit">
-      <small>
-        © {new Date().getFullYear()}, Louis Lee. All Rights Reserved. Built with{' '}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </small>
-    </div>
+        <a href="/">
+          <IconContext.Provider value={{ className: 'react-icons', size: '40px' }}>
+            <AiFillMail />
+          </IconContext.Provider>
+        </a>
+      </div>
+      <div className="credit">
+        <small>
+          © {new Date().getFullYear()}, Louis Lee. All Rights Reserved. Built with{' '}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </small>
+      </div>
+    </Wrapper>
   </footer>
 )
 
@@ -40,26 +43,20 @@ Footer.propTypes = {
 }
 
 export default styled(Footer)`
-  background-color: #777;
-  padding: 0.5rem 5rem;
+  background-color: var(--secondaryDark);
   min-height: 20vh;
-  color: white;
+  color: var(--mainWhite);
   h3 {
     margin: 1.25rem 0;
   }
   a {
-    display: inline-block;
-    color: white;
-    text-decoration: underline;
-    text-decoration: none;
+    color: var(--mainWhite);
   }
   a:hover,
   a:focus {
     color: #999;
   }
   .react-icons {
-    /* height: 40px;
-    width: 40px; */
     margin: 5px;
   }
   .credit {
