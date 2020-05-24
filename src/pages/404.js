@@ -1,8 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import PropTypes from 'prop-types'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const NotFoundPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -14,6 +15,11 @@ const NotFoundPage = ({ data, location }) => {
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </Layout>
   )
+}
+
+NotFoundPage.propTypes = {
+  data: PropTypes.node,
+  location: PropTypes.string,
 }
 
 export default NotFoundPage
