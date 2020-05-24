@@ -33,6 +33,11 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured", name: "featured", widget: "boolean" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Demo", name: "demo", widget: "string" }
+      - { label: "Code", name: "code", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
