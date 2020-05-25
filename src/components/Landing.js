@@ -30,7 +30,6 @@ Landing.propTypes = {
 export default styled(Landing)`
   height: calc(100vh - 65px);
   max-height: 610px;
-  max-width: 1280px;
   background: var(--primaryColor);
   /* background: linear-gradient(135deg, rgba(196, 212, 255, 1) 0%, rgba(255, 153, 153, 1) 100%); */
   h1 {

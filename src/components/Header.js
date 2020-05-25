@@ -75,6 +75,7 @@ export default styled(Header)`
   }
   .hideNav {
     display: none;
+    transition: var(--mainTransition);
   }
   .showNav {
     position: relative;
