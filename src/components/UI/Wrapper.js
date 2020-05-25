@@ -8,7 +8,7 @@ const Wrapper = ({ children, className }) => {
 
 Wrapper.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default styled(Wrapper)`

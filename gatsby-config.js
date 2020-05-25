@@ -33,11 +33,20 @@ module.exports = {
         name: `assets`,
       },
     },
+    // Including in your Gatsby plugins will transform any paths in your frontmatter
+    `gatsby-plugin-netlify-cms-paths`,
+
+    // Including in your Remark plugins will transform any paths in your markdown body
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-plugin-netlify-cms-paths`],
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          'gatsby-remark-relative-images',
           {
             resolve: `gatsby-remark-images`,
             options: {
