@@ -13,8 +13,9 @@ Tag.propTypes = {
 export default styled(Tag)`
   font-size: 9px;
   display: inline-block;
-  /* background-color: gray; */
   color: gray;
+  color: var(--darkGrey);
+
   margin: 2px;
   padding: 2px;
   border-radius: 5px;

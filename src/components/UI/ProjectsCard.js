@@ -9,7 +9,7 @@ const ProjectsCard = ({ className, title, tags, demo, code, thumbnail, category 
   return (
     <div className={className}>
       <Image fluid={thumbnail.childImageSharp.fluid} alt="Project Screenshot" />
-      <p>{category}</p>
+      <p className="category">{category}</p>
       <p> {title}</p>
       {tags.map(tag => (
         <Tag tag={tag} />
@@ -42,7 +42,8 @@ export default styled(ProjectsCard)`
   flex: 0 1;
   margin: 20px;
   box-shadow: var(--lightShadow);
-  border-radius: 5px;
+  border: 0.5px solid gray;
+  border-radius: 10px;
   text-align: center;
   &:hover {
     box-shadow: var(--darkShadow);
@@ -50,9 +51,14 @@ export default styled(ProjectsCard)`
   .gatsby-image-wrapper {
     height: 220px;
     width: auto;
+    border-radius: 10px;
   }
-  .icons {
-    font-size: 21px;
-    vertical-align: middle;
+  .category {
+    font-size: 9px;
+    display: inline-block;
+    color: var(--secondaryDark);
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
   }
 `

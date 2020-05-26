@@ -9,7 +9,8 @@ const FeaturedCard = ({ className, featured_title, title, thumbnail, description
     <article className={className}>
       <Image fluid={thumbnail.childImageSharp.fluid} alt="Project Screenshot" />
       <div className="info">
-        <Title title={featured_title} subtitle={title} />
+        <h2>{featured_title} </h2>
+        <h4> {title}</h4>
         <p>{description}</p>
         <div className="links">
           <a href={demo} target="_blank" rel="noreferrer">
@@ -42,14 +43,23 @@ export default styled(FeaturedCard)`
   }
   justify-content: center;
   margin: 10px 0;
-  outline: 0.5px solid gray;
+  border: 0.5px solid gray;
+  border-radius: 5px;
   box-shadow: var(--lightShadow);
   &:hover {
     box-shadow: var(--darkShadow);
   }
+  h2 {
+    letter-spacing: 7px;
+    color: var(--secondaryDark);
+  }
+  h4 {
+    color: var(--primaryDark);
+  }
   .gatsby-image-wrapper {
     min-width: 300px;
     flex-grow: 1;
+    border-radius: 5px;
   }
   .info {
     padding: 1rem 3rem 3rem 3rem;
