@@ -2,7 +2,7 @@
 title: ONNI
 category: Full Stack
 featured: true
-featured title: Custom CMS - ONNI
+featured title: Custom CMS
 date: 2020-05-25T14:42:01.798Z
 thumbnail: /assets/onni.png
 demo: onnidev.azurewebsites.net/
