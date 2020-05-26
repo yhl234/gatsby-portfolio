@@ -2,7 +2,7 @@
 title: Lazy Tulip
 category: Front End
 featured: true
-featured title: Lazy Tulip UI Redesign
+featured title: UI Redesign
 date: 2020-05-25T14:52:31.135Z
 thumbnail: /assets/lazy-tulip-ui-redesign.png
 demo: https://lazy-tulip-ui-redesign.now.sh/
