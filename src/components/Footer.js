@@ -2,29 +2,28 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { IconContext } from 'react-icons'
-import { AiFillMail, AiFillLinkedin } from 'react-icons/ai'
-import { FaGithubSquare } from 'react-icons/fa'
+import { FaGithubSquare, FaLinkedin, FaEnvelopeSquare } from 'react-icons/fa'
 import Wrapper from './UI/Wrapper'
 
 const Footer = ({ className }) => (
   <footer className={className}>
-    <Wrapper padding="5px">
+    <Wrapper padding="20px">
       <h3>See You Soon</h3>
       <div className="social-icons">
-        <a href="/">
+        <a href="https://www.linkedin.com/in/louis-lee-a85159129" title="Louis Lee" target="_blank" rel="noreferrer">
           <IconContext.Provider value={{ className: 'react-icons', size: '40px' }}>
-            <AiFillLinkedin />
+            <FaLinkedin />
           </IconContext.Provider>
         </a>
-        <a href="/">
+        <a href="https://github.com/yhl234" title="yhl234" target="_blank" rel="noreferrer">
           <IconContext.Provider value={{ className: 'react-icons', size: '40px' }}>
             <FaGithubSquare />
           </IconContext.Provider>
         </a>
 
-        <a href="/">
+        <a href="mailto:leejepn@gmail.com" title="leejepn@gmail.com" target="_blank" rel="noreferrer">
           <IconContext.Provider value={{ className: 'react-icons', size: '40px' }}>
-            <AiFillMail />
+            <FaEnvelopeSquare />
           </IconContext.Provider>
         </a>
       </div>

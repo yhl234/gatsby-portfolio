@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 
 const Title = ({ title, subtitle, className }) => (
   <div className={className}>
-    <h4>
+    <h2>
       <span className="title">{title}</span>
       <span>{subtitle}</span>
-    </h4>
+    </h2>
   </div>
 )
 Title.propTypes = {
@@ -20,13 +20,14 @@ export default styled(Title)`
   text-transform: uppercase;
   font-size: 2.3rem;
   margin-bottom: 2rem;
-  h4 {
+  h2 {
     text-align: center;
     letter-spacing: 7px;
-    color: var(--primaryColor);
+    color: var(--secondaryDark);
   }
   .title {
-    color: var(--mainBlack);
+    color: var(--secondaryDark);
+    background-color: var(--secondaryColor);
   }
   span {
     display: block;

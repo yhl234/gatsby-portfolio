@@ -29,6 +29,12 @@ const ProjectsCard = ({ className, title, tags, demo, code, thumbnail, category 
 
 ProjectsCard.propTypes = {
   className: PropTypes.string,
+  title: PropTypes.string,
+  thumbnail: PropTypes.array,
+  tags: PropTypes.array,
+  description: PropTypes.string,
+  demo: PropTypes.string,
+  code: PropTypes.string,
 }
 
 export default styled(ProjectsCard)`

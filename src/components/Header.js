@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import Image from 'gatsby-image'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -11,11 +12,15 @@ const Header = ({ className }) => {
   const toggleNav = () => {
     setNav(Open => !Open)
   }
+  const data = useStaticQuery(getLogo)
+  const logo = data.file.childImageSharp.fluid
   return (
     <header className={className}>
       <Wrapper>
         <nav className="navbar">
-          <img className="logo" src="https://ccc.com" alt="logo" />
+          <Link to="/">
+            <Image fluid={logo} className="logo" alt="logo" />
+          </Link>
           <button type="button" className="toggleBtn" onClick={toggleNav}>
             <FaAlignRight className="toggleIcon" />
           </button>
@@ -47,7 +52,7 @@ Header.propTypes = {
 
 export default styled(Header)`
   height: 65px;
-  background-color: var(--primaryColor);
+  background-color: var(--secondaryDark);
   /* background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 153, 153, 1) 100%); */
   .navbar {
     width: 100%;
@@ -63,6 +68,9 @@ export default styled(Header)`
       }
     }
   }
+  .gatsby-image-wrapper {
+    width: 65px;
+  }
   .toggleBtn {
     padding: 1rem 5px;
     background: transparent;
@@ -71,6 +79,7 @@ export default styled(Header)`
     cursor: pointer;
   }
   .toggleIcon {
+    color: var(--mainWhite);
     font-size: 1.5rem;
   }
   .hideNav {
@@ -82,12 +91,16 @@ export default styled(Header)`
     height: auto;
     list-style: none;
     z-index: 999;
-    background-color: var(--primaryColor);
+    background-color: var(--primaryDark);
   }
   .navLink {
-    color: var(--secondaryDark);
+    color: var(--mainWhite);
     display: block;
     padding: 1rem;
+    &:hover {
+      background-color: var(--secondaryColor);
+      color: var(--primaryDark);
+    }
   }
 
   @media screen and (min-width: 576px) {
@@ -100,6 +113,17 @@ export default styled(Header)`
       display: flex;
       a {
         padding: 1rem 1.25rem;
+      }
+    }
+  }
+`
+const getLogo = graphql`
+  {
+    file(relativePath: { regex: "/logo.png/" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
       }
     }
   }

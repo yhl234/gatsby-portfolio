@@ -1,33 +1,32 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled from 'styled-components'
-import ProjectsCard from './UI/ProjectsCard'
 import Wrapper from './UI/Wrapper'
 import Title from './UI/Title'
+import FeaturedCard from './UI/FeaturedCard'
 
-const ProjectsList = ({ className }) => {
+const FeaturedList = ({ className }) => {
   const data = useStaticQuery(getProjects)
   const projects = data.allMarkdownRemark.edges
+
   return (
     <section className={className}>
-      <Title title="all" subtitle="projects" />
-
-      <Wrapper className="row" padding="5px">
+      <Title title="featured" subtitle="projects" />
+      <Wrapper padding="5px 20px 50px 20px">
         {projects.map(
           (
             {
               node: {
-                frontmatter: { title, category, thumbnail, tags, description, demo, code },
+                frontmatter: { featured_title, title, thumbnail, description, demo, code },
               },
             },
             i
           ) => {
             return (
-              <ProjectsCard
+              <FeaturedCard
                 key={i}
+                featured_title={featured_title}
                 title={title}
-                category={category}
-                tags={tags}
                 description={description}
                 demo={demo}
                 code={code}
@@ -41,21 +40,25 @@ const ProjectsList = ({ className }) => {
   )
 }
 
-export default styled(ProjectsList)`
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-`
+FeaturedList.propTypes = {
+  className: PropTypes.string,
+}
+
+export default FeaturedList
 
 const getProjects = graphql`
   {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/content/projects/" } }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/projects/" }, frontmatter: { featured: { eq: true } } }
+    ) {
       edges {
         node {
-          id
           frontmatter {
+            title
+            featured_title
+            description
+            demo
+            code
             thumbnail {
               childImageSharp {
                 fluid {
@@ -63,12 +66,6 @@ const getProjects = graphql`
                 }
               }
             }
-            category
-            title
-            tags
-            description
-            demo
-            code
           }
         }
       }
