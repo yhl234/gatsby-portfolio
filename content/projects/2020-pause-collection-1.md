@@ -2,7 +2,7 @@
 title: Pause Collection
 category: Full Stack
 featured: true
-featured title: E-commerce - Pause Collection
+featured title: E-commerce
 date: 2020-05-25T14:50:22.830Z
 thumbnail: /assets/pause-collection.png
 demo: https://yhl234.xyz/
