@@ -1,5 +1,5 @@
 ---
-title: React Weather api
+title: React Weather app
 category: Front End
 featured: true
 featured title: Front End Library
