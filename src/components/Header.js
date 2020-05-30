@@ -31,12 +31,12 @@ const Header = ({ className }) => {
               </Link>
             </li>
             <li>
-              <Link className="navLink" to="/Projects">
+              <Link className="navLink" to="/projects">
                 projects
               </Link>
             </li>
             <li>
-              <Link className="navLink" to="/Contact">
+              <Link className="navLink" to="/contact">
                 Contact me
               </Link>
             </li>
