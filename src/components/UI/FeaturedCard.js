@@ -2,14 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
-import Title from './Title'
 
-const FeaturedCard = ({ className, featured_title, title, thumbnail, description, demo, code }) => {
+const FeaturedCard = ({ className, featuredTitle, title, thumbnail, description, demo, code }) => {
   return (
     <article className={className}>
       <Image fluid={thumbnail.childImageSharp.fluid} alt="Project Screenshot" />
       <div className="info">
-        <h2>{featured_title} </h2>
+        <h2>{featuredTitle} </h2>
         <h4> {title}</h4>
         <p>{description}</p>
         <div className="links">
@@ -28,7 +27,8 @@ const FeaturedCard = ({ className, featured_title, title, thumbnail, description
 
 FeaturedCard.propTypes = {
   className: PropTypes.string,
-  featured_title: PropTypes.string,
+  featuredTitle: PropTypes.string,
+  title: PropTypes.string,
   thumbnail: PropTypes.array,
   description: PropTypes.string,
   demo: PropTypes.string,

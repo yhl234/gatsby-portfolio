@@ -10,7 +10,7 @@ const ProjectsCard = ({ className, title, tags, demo, code, thumbnail, category 
     <div className={className}>
       <Image fluid={thumbnail.childImageSharp.fluid} alt="Project Screenshot" />
       <p className="category">{category}</p>
-      <p> {title}</p>
+      <p className="title"> {title}</p>
       {tags.map(tag => (
         <Tag tag={tag} />
       ))}
@@ -32,7 +32,7 @@ ProjectsCard.propTypes = {
   title: PropTypes.string,
   thumbnail: PropTypes.array,
   tags: PropTypes.array,
-  description: PropTypes.string,
+  category: PropTypes.string,
   demo: PropTypes.string,
   code: PropTypes.string,
 }
@@ -55,10 +55,13 @@ export default styled(ProjectsCard)`
   }
   .category {
     font-size: 9px;
+    text-transform: uppercase;
     display: inline-block;
     color: var(--secondaryDark);
     margin: 2px;
     padding: 2px;
-    border-radius: 5px;
+  }
+  .title {
+    color: var(--secondaryDark);
   }
 `

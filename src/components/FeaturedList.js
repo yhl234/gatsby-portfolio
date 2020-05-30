@@ -17,7 +17,7 @@ const FeaturedList = ({ className }) => {
           (
             {
               node: {
-                frontmatter: { featured_title, title, thumbnail, description, demo, code },
+                frontmatter: { featured_title: featuredTitle, title, thumbnail, description, demo, code },
               },
             },
             i
@@ -25,7 +25,7 @@ const FeaturedList = ({ className }) => {
             return (
               <FeaturedCard
                 key={i}
-                featured_title={featured_title}
+                featuredTitle={featuredTitle}
                 title={title}
                 description={description}
                 demo={demo}

@@ -1,14 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import ContactForm from '../components/UI/ContactForm'
 
-const Contact = props => {
+const Contact = () => {
   return (
     <Layout>
       <SEO title="Contact" />
-      <div>
-        <div>hello from contact</div>
-      </div>
+      <ContactForm />
     </Layout>
   )
 }

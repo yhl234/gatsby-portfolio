@@ -10,9 +10,10 @@ const Landing = ({ className }) => {
         <div className="corner">
           <h1>
             Hi !
-            <br /> I am
-            <br />  Louis,
-            <br />  I develop 
+            <br />I am
+            <br />
+            Louis,
+            <br /> I develop 
             <br />
             Optimized  <br />
             Web applications

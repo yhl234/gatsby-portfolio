@@ -56,6 +56,7 @@ export default styled(Header)`
   /* background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 153, 153, 1) 100%); */
   .navbar {
     width: 100%;
+    height: 100%;
     .logo {
       display: none;
     }
@@ -94,6 +95,7 @@ export default styled(Header)`
     background-color: var(--primaryDark);
   }
   .navLink {
+    margin: 0;
     color: var(--mainWhite);
     display: block;
     padding: 1rem;

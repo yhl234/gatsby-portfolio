@@ -5,8 +5,7 @@ import PropTypes from 'prop-types'
 const Title = ({ title, subtitle, className }) => (
   <div className={className}>
     <h2>
-      <span className="title">{title}</span>
-      <span>{subtitle}</span>
+      <span className="title">{title}</span> <span>{subtitle}</span>
     </h2>
   </div>
 )
@@ -30,10 +29,12 @@ export default styled(Title)`
     background-color: var(--secondaryColor);
   }
   span {
-    display: block;
+    /* display: block; */
+    font-size: 80%;
   }
   @media (min-width: 576px) {
     span {
+      font-size: 100%;
       display: inline-block;
       margin: 0 0.35rem;
     }
