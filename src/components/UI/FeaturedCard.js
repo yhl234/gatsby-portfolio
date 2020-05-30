@@ -50,14 +50,22 @@ export default styled(FeaturedCard)`
     box-shadow: var(--darkShadow);
   }
   h2 {
-    letter-spacing: 7px;
     color: var(--secondaryDark);
+    margin-top: auto;
+    @media screen and (min-width: 576px) {
+      letter-spacing: 7px;
+      margin-top: 3.5rem;
+    }
   }
   h4 {
     color: var(--primaryDark);
+    margin-top: auto;
   }
   .gatsby-image-wrapper {
-    min-width: 300px;
+    min-width: 100%;
+    @media screen and (min-width: 576px) {
+      min-width: 320px;
+    }
     flex-grow: 1;
     border-radius: 5px;
   }

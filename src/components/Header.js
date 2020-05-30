@@ -96,6 +96,7 @@ export default styled(Header)`
   }
   .navLink {
     margin: 0;
+    height: 100%;
     color: var(--mainWhite);
     display: block;
     padding: 1rem;
@@ -103,6 +104,9 @@ export default styled(Header)`
       background-color: var(--secondaryColor);
       color: var(--primaryDark);
     }
+  }
+  li {
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: 576px) {
