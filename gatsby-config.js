@@ -4,6 +4,7 @@ module.exports = {
     author: {
       name: `Louis Lee`,
     },
+    siteUrl: `https://romantic-morse-fad780.netlify.app/`,
     description: `A portfolio site`,
   },
   plugins: [
