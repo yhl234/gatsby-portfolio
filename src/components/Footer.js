@@ -9,7 +9,7 @@ const Footer = ({ className }) => (
   <footer className={className}>
     <Wrapper padding="20px">
       <h3>See You Soon</h3>
-      <div className="social-icons">
+      <div>
         <a href="https://www.linkedin.com/in/louis-lee-a85159129" title="Louis Lee" target="_blank" rel="noreferrer">
           <IconContext.Provider value={{ className: 'react-icons', size: '40px' }}>
             <FaLinkedin />
