@@ -2,7 +2,7 @@
 title: React Weather app
 category: Front End
 featured: true
-featured title: Front End Library
+featured title: Front End API
 date: 2020-03-29T21:03:15.773Z
 thumbnail: /assets/react-weather.png
 demo: https://react-weather-ten.now.sh/
