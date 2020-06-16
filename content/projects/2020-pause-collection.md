@@ -1,11 +1,11 @@
 ---
 title: ONNI
 category: Full Stack
-featured: true
+featured: false
 featured title: Custom CMS
 date: 2020-05-25T14:42:01.798Z
 thumbnail: /assets/onni.png
-demo: onnidev.azurewebsites.net/
+demo: https://onnidev.azurewebsites.net/
 code: https://github.com/Ryan-Gee/onni
 tags:
   - .Net Core 2.1
