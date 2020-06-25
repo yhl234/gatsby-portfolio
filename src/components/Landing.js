@@ -9,13 +9,14 @@ const Landing = ({ className }) => {
       <Wrapper className="col" padding="20px">
         <div className="corner">
           <h1>
-            Hi !
+            Hi!
             <br />I am
             <br />
             Louis,
-            <br /> I develop 
+            <br />I develop
             <br />
-            Optimized  <br />
+            Optimized
+            <br />
             Web applications
           </h1>
         </div>

@@ -62,7 +62,7 @@ const getProjects = graphql`
             thumbnail {
               childImageSharp {
                 fluid {
-                  ...GatsbyImageSharpFluid_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
